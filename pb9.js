@@ -1,6 +1,6 @@
 
 
-
+var itemList = document.getElementById('items');
 
 var filter = document.getElementById('filter')
 filter.addEventListener('keyup', filterItems);
@@ -11,7 +11,8 @@ function filterItems(e){
     // convert text to lowercase
     var text = e.target.value.toLowerCase();
     // Get lis
-    var items = itemList.getElementsByTagName('li');
+    var items = document.getElementsByTagName('li');
+    console.log('items')
     // Convert to an array
     Array.from(items).forEach(function(item){
       var itemName = item.firstChild.textContent;
